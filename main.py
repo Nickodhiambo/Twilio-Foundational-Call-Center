@@ -4,6 +4,12 @@ from twilio.twiml.voice_response import VoiceResponse, Gather
 app = Flask(__name__)
 
 # Define a method that processes incoming calls
+
+app.route('/', methods=['GET'])
+def root():
+    print("Hello world")
+
+
 app.route('/voice', methods=['GET', 'POST'])
 def voice():
     print("Hello World")
