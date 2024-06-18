@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 # Define a method that processes incoming calls
 
-app.route('/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def root():
-    print("Hello world")
+    return "Hello world"
 
 
-app.route('/voice', methods=['GET', 'POST'])
+@app.route('/voice', methods=['GET', 'POST'])
 def voice():
     print("Hello World")
     res = VoiceResponse()
