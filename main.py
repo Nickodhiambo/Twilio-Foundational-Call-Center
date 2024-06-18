@@ -6,6 +6,7 @@ app = Flask(__name__)
 # Define a method that processes incoming calls
 app.route('/voice', methods=['GET', 'POST'])
 def voice():
+    print("Hello World")
     res = VoiceResponse()
     gather = Gather(action='/gather', num_digits=1, method='POST')
     gather.say('Welcome to customer support. Press 1 for account information. \
